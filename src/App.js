@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
 
-function Helloworld (){
+function Helloworld (props){
+  console.log(props)
   return (
-    <div id="hello"> Hello World </div>
+    <div id="hello"> 
+    <h3>{props.subtitle}</h3>
+    {props.mytest} 
+    </div>
   );
 }
 
@@ -11,7 +15,12 @@ function Helloworld (){
 
 class App extends React.Component {
   render(){
-    return <div>This is my component  <Helloworld/> </div>
+    return <div>
+      This is my component 
+       <Helloworld mytest="hello fast" subtitle="Lorem ipsum"/>
+       <Helloworld mytest="Hola Mundo" subtitle="Componente 2"/>  
+       <Helloworld mytest="Epale" subtitle="Practicando"/> 
+       </div>
   }
 }
 
