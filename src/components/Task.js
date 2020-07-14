@@ -5,8 +5,8 @@ class Task extends Component {
     StyleCompleted(){
         return{
            fontSize: '20px',
-           color: 'Black',
-           textDecoration: 'none' 
+           color: this.props.task.done ? 'Gray' : 'Black',
+           textDecoration: this.props.task.done ? 'line-through' : 'none' 
     }
   }
 
