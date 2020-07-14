@@ -4,7 +4,6 @@ import tasks from './example/task.json';
 
 import Tasks from './components/Tasks';
 
-
 class App extends Component {
   
   state = {
