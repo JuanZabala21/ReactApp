@@ -1,7 +1,6 @@
 import React, {Component} from 'react'; 
 import PropTypes from 'prop-types';
 
-
 class Task extends Component {
 
     StyleCompleted(){
@@ -19,8 +18,8 @@ class Task extends Component {
         {task.description} - 
         {task.done} - 
         {task.id} 
-        <input type="checkbox" /> 
-        <button style={btnDelete}>
+        <input type="checkbox" onChange={this.props.checkDone.bind(this, task.id)} /> 
+        <button style={btnDelete} onClick={this.props.deleteTask.bind(this, task.id)}> 
             X
         </button>
         </p>
